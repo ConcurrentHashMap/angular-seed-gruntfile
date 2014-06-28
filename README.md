@@ -12,7 +12,7 @@ angular-seed-gruntfile
 - Install Grunt with: `npm install -g grunt-cli`
 - Get the `Gruntfile.js` from this repository
 - You will need to adapt the original `package.json` from angular-seed and add the following `devDependencies`:
-```
+```json
 "devDependencies": {
     "bower": "^1.3.5",
     "grunt": "^0.4.5",
@@ -40,7 +40,7 @@ angular-seed-gruntfile
 }
 ```
 - For easier bootstrapping, adapt `scripts` to:
-```
+```json
 "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
@@ -62,9 +62,10 @@ You can build a `dist` folder with `grunt build`, including running tests, creat
 
 For the minification, you will need some additional comments inside your html file (see [grunt-usemin](https://github.com/yeoman/grunt-usemin) for more information). Your `index.html` should look like:
 
-```
+```html
 <!-- build:css css/3rd-party.min.css -->
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+<link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
 <!-- endbuild -->
 <!-- build:css css/app.min.css -->
 <link rel="stylesheet" href="css/app.css">
@@ -73,12 +74,8 @@ For the minification, you will need some additional comments inside your html fi
 ...
 
 <!-- build:js js/3rd-party.min.js -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
 <!-- endbuild -->
 <!-- build:js js/app.min.js -->
 <script src="js/app.js"></script>
