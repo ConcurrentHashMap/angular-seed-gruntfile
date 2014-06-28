@@ -267,7 +267,7 @@ module.exports = function (grunt) {
 
     // Run `test:dev` for use in development for monitoring file changes and re-run unit tests on each change
     grunt.registerTask('test:dev', ['karma:watch']);
-    // Run `test:prebuild` for running a continuous integration test including JSHint and Karma
+    // Run `test:prebuild` for running a continuous integration test
     grunt.registerTask('test:prebuild', ['karma:continuous']);
 
     // Run `docs` as alias for docker (clean docs directory first)
