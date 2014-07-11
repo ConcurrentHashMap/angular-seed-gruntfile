@@ -64,7 +64,7 @@ module.exports = function (grunt) {
                 options: {
                     livereload: '<%= server.livereload %>'
                 },
-                files: '<%= src %>'
+                files: ['<%= src %>', 'app/index.html', 'app/css/app.css']
             }
         },
 
